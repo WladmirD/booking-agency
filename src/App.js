@@ -1,6 +1,6 @@
 import React from 'react';
 import ReservationItem from './components/reservation-item';
-import Header from './components/header/header';
+import Header from './components/header';
 import BookingsScreen from './components/bookings';
 import ContactScreen from './components/contact';
 import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
