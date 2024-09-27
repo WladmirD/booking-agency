@@ -8,7 +8,6 @@ import Login from './components/login';
 import Home from './components/home';
 
 const Destinations = () => <div>Destinations Page</div>;
-const Login = () => <div>Login Page</div>;
 const Packages = () => <div>Packages Page</div>;
 const Signup = () => <div>Sign Up Page</div>;
 
