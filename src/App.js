@@ -1,11 +1,11 @@
 import React from 'react';
+import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
 import ReservationItem from './components/reservation-item';
 import Header from './components/header';
 import BookingsScreen from './components/bookings';
 import ContactScreen from './components/contact';
-import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
+import Home from './components/home';
 
-const Home = () => <div>Home Page</div>;
 const Destinations = () => <div>Destinations Page</div>;
 const Packages = () => <div>Packages Page</div>;
 const Login = () => <div>Login Page</div>;
@@ -24,9 +24,6 @@ function App() {
         <Route path='/login' element={<Login />} />
         <Route path='/signup' element={<Signup />} />
       </Routes>
-      <div>
-        <ReservationItem />
-      </div>
     </Router>
   );
 }
