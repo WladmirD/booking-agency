@@ -3,7 +3,7 @@ import { Link } from 'react-router-dom';
 import logoUrl from '../../assets/logo.svg';
 // import styles from './header.module.css';
 
-const Header = () => {
+const Header = ({ toggleModal }) => {
   return (
     <header className='bg-cover bg-center'>
       <div className='container mx-auto py-4 px-6 flex justify-between items-center'>
@@ -27,7 +27,7 @@ const Header = () => {
         </nav>
 
         <div className='flex space-x-4 items-center'>
-          <Link to='/login' className='text-white'>
+          <Link to='/login' className='text-white' onClick={toggleModal}>
             Login
           </Link>
           <Link
