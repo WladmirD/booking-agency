@@ -3,7 +3,7 @@ import { Link, useLocation } from 'react-router-dom';
 import logoUrl from '../../assets/logo.svg';
 import styles from './index.module.css';
 
-const Header = () => {
+const Header = ({ toggleModal }) => {
   const location = useLocation();
 
   return (
@@ -60,6 +60,7 @@ const Header = () => {
           <Link
             to='/signup'
             className='bg-orange-400 text-white px-4 py-2 rounded-md hover:bg-orange-500'
+            onClick={toggleModal}
           >
             Sign Up
           </Link>
