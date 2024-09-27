@@ -1,27 +1,54 @@
 import React from 'react';
-import { Link } from 'react-router-dom';
+import { Link, useLocation } from 'react-router-dom';
 import logoUrl from '../../assets/logo.svg';
-// import styles from './header.module.css';
+import styles from './index.module.css';
 
 const Header = () => {
+  const location = useLocation();
+
   return (
-    <header className='bg-cover bg-center'>
+    <header className={`bg-cover bg-center ${styles.container}`}>
       <div className='container mx-auto py-4 px-6 flex justify-between items-center'>
         <img src={logoUrl} alt='logo' style={{ width: '100px' }} />
         <nav className='flex space-x-8 text-white'>
-          <Link to='/' className='hover:text-orange-400'>
+          <Link
+            to='/'
+            className={`hover:text-orange-400 ${
+              location.pathname === '/' ? styles.active : ''
+            } ${styles.font}`}
+          >
             Home
           </Link>
-          <Link to='/destinations' className='hover:text-orange-400'>
+          <Link
+            to='/destinations'
+            className={`hover:text-orange-400 ${
+              location.pathname === '/destinations' ? styles.active : ''
+            } ${styles.font}`}
+          >
             Destinations
           </Link>
-          <Link to='/packages' className='hover:text-orange-400'>
+          <Link
+            to='/packages'
+            className={`hover:text-orange-400 ${
+              location.pathname === '/packages' ? styles.active : ''
+            } ${styles.font}`}
+          >
             Packages
           </Link>
-          <Link to='/booking' className='hover:text-orange-400'>
+          <Link
+            to='/booking'
+            className={`hover:text-orange-400 ${
+              location.pathname === '/booking' ? styles.active : ''
+            } ${styles.font}`}
+          >
             Booking
           </Link>
-          <Link to='/contact' className='hover:text-orange-400'>
+          <Link
+            to='/contact'
+            className={`hover:text-orange-400 ${
+              location.pathname === '/contact' ? styles.active : ''
+            } ${styles.font}`}
+          >
             Contact Us
           </Link>
         </nav>
