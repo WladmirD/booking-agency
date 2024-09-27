@@ -1,0 +1,17 @@
+.textContainer {
+   margin: 0 0 64px 0;
+   color: white;
+}
+
+.selectorContainer {
+   background-color: white;
+   box-shadow: inset 0px 0px 0px 1px rgb(0 0 0 / 10%);
+   padding: 24px 12px;
+   border-radius: 12px;
+}
+
+.dateRangeContainer {
+   width: 18rem;
+   text-align: center;
+}
+
