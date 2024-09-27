@@ -5,12 +5,9 @@ import logoUrl from '../../assets/logo.svg';
 
 const Header = () => {
   return (
-    <header className='bg-cover bg-center' style={{ backgroundColor: 'black' }}>
+    <header className='bg-cover bg-center'>
       <div className='container mx-auto py-4 px-6 flex justify-between items-center'>
-        <Link to='/'>
-          <img src={logoUrl} alt='logo' />
-        </Link>
-
+        <img src={logoUrl} alt='logo' style={{ width: '100px' }} />
         <nav className='flex space-x-8 text-white'>
           <Link to='/' className='hover:text-orange-400'>
             Home
@@ -30,7 +27,6 @@ const Header = () => {
         </nav>
 
         <div className='flex space-x-4 items-center'>
-          <div className='text-white'>Eng</div>
           <Link to='/login' className='text-white'>
             Login
           </Link>
