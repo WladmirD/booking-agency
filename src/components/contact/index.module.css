@@ -1,0 +1,131 @@
+/* src/components/index.module.css */
+
+.contactContainer {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 50px;
+    background: linear-gradient(90deg, #F9E9E0 0%, #F5D4BB 100%);
+    border-radius: 15px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.contactInfo {
+    flex: 1;
+    padding-right: 50px;
+    color: #333;
+}
+
+.contactInfo h1 {
+    font-size: 2.5rem;
+    color: #333;
+    margin-bottom: 20px;
+}
+
+.contactInfo p {
+    font-size: 1.2rem;
+    margin-bottom: 10px;
+    color: #555;
+}
+
+.contactDetails p {
+    font-size: 1.1rem;
+    display: flex;
+    align-items: center;
+    margin-bottom: 10px;
+}
+
+.contactDetails i {
+    margin-right: 10px;
+    font-size: 1.5rem;
+    color: #ff9900;
+}
+
+.contactFormContainer {
+    flex: 1;
+    background-color: #fff;
+    padding: 30px;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.contactForm {
+    display: flex;
+    flex-direction: column;
+}
+
+.formGroup {
+    margin-bottom: 20px;
+}
+
+.formGroup label {
+    font-size: 1.1rem;
+    margin-bottom: 5px;
+    color: #333;
+}
+
+.formGroup input,
+.formGroup textarea {
+    width: 100%;
+    padding: 12px;
+    font-size: 1rem;
+    border-radius: 8px;
+    border: 1px solid #ccc;
+    transition: border-color 0.3s ease;
+}
+
+.formGroup input:focus,
+.formGroup textarea:focus {
+    outline: none;
+    border-color: #ff9900;
+}
+
+.submitBtn {
+    padding: 15px;
+    font-size: 1.2rem;
+    color: white;
+    background-color: #ff9900;
+    border: none;
+    border-radius: 8px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.submitBtn:hover {
+    background-color: #e68a00;
+}
+
+.contactFooter {
+    background-color: #333;
+    color: white;
+    padding: 40px;
+    text-align: center;
+}
+
+.footerContent {
+    display: flex;
+    justify-content: space-between;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.footerDetails p {
+    color: white;
+    font-size: 1.1rem;
+}
+
+.footerDetails i {
+    margin-right: 10px;
+}
+
+.socialMedia a {
+    margin-right: 15px;
+    font-size: 1.5rem;
+    color: #ff9900;
+}
+
+.socialMedia a:hover {
+    color: #e68a00;
+}
