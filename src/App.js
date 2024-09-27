@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { useState } from 'react';
 import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
 import ReservationItem from './components/reservation-item';
 import Header from './components/header';
@@ -12,7 +12,7 @@ const Packages = () => <div>Packages Page</div>;
 const Signup = () => <div>Sign Up Page</div>;
 
 function App() {
-  const [showModal, setShowModal] = React.useState(false);
+  const [showModal, setShowModal] = useState(false);
   const toggleModal = () => {
     setShowModal(!showModal);
   };
