@@ -1,12 +1,13 @@
-import Header from './components/header/header';
 import React from 'react';
+import ReservationItem from './components/reservation-item';
+import Header from './components/header/header';
+import BookingsScreen from './components/bookings';
+import ContactScreen from './components/contact';
 import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
 
 const Home = () => <div>Home Page</div>;
 const Destinations = () => <div>Destinations Page</div>;
 const Packages = () => <div>Packages Page</div>;
-const Booking = () => <div>Booking Page</div>;
-const Contact = () => <div>Contact Us Page</div>;
 const Login = () => <div>Login Page</div>;
 const Signup = () => <div>Sign Up Page</div>;
 
@@ -18,11 +19,14 @@ function App() {
         <Route path='/' element={<Home />} />
         <Route path='/destinations' element={<Destinations />} />
         <Route path='/packages' element={<Packages />} />
-        <Route path='/booking' element={<Booking />} />
-        <Route path='/contact' element={<Contact />} />
+        <Route path='/booking' element={<BookingsScreen />} />
+        <Route path='/contact' element={<ContactScreen />} />
         <Route path='/login' element={<Login />} />
         <Route path='/signup' element={<Signup />} />
       </Routes>
+      <div>
+        <ReservationItem />
+      </div>
     </Router>
   );
 }
