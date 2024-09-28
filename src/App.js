@@ -1,14 +1,13 @@
 import React, { useState } from 'react';
 import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
-import ReservationItem from './components/reservation-item';
+import PackagesScreen from './components/packages';
 import Header from './components/header';
 import BookingsScreen from './components/bookings';
 import ContactScreen from './components/contact';
 import Login from './components/login';
 import Home from './components/home';
+import Destinations from './components/destinations';
 
-const Destinations = () => <div>Destinations Page</div>;
-const Packages = () => <div>Packages Page</div>;
 const Signup = () => <div>Sign Up Page</div>;
 
 function App() {
@@ -22,7 +21,7 @@ function App() {
       <Routes>
         <Route path='/' element={<Home />} />
         <Route path='/destinations' element={<Destinations />} />
-        <Route path='/packages' element={<ReservationItem />} />
+        <Route path='/packages' element={<PackagesScreen />} />
         <Route path='/booking' element={<BookingsScreen />} />
         <Route path='/contact' element={<ContactScreen />} />
         <Route

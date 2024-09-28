@@ -5,7 +5,7 @@ import image2 from '../../assets/reservation-images/taj.jpg';
 import image3 from '../../assets/reservation-images/dubai.jpg';
 import image4 from '../../assets/reservation-images/banff.jpg';
 
-const ReservationItem = () => {
+const DestinationsScreen = () => {
   const tours = [
     {
       id: 1,
@@ -92,7 +92,7 @@ const ReservationItem = () => {
   return (
     <div> 
       <section className={styles.tours}>
-        <h1>Tours</h1>
+        <h1>Destinations</h1>
         <div className={styles.tourGrid}>
           {tours.map(tour => (
             <div key={tour.id} className={styles.tourItem}>
@@ -115,4 +115,4 @@ const ReservationItem = () => {
 };
   
 
-export default ReservationItem;
+export default DestinationsScreen;
