@@ -1,5 +1,9 @@
 /* src/components/index.module.css */
 
+.wrapper {
+    min-height: calc(100vh - 177px);
+}
+
 .contactContainer {
     display: flex;
     justify-content: space-between;

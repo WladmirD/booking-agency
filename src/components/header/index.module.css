@@ -9,3 +9,8 @@
 .font {
    font-size: 20px;
 }
+
+.login{
+   color: white;
+   cursor: pointer;
+}

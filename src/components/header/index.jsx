@@ -54,9 +54,9 @@ const Header = ({ toggleModal }) => {
         </nav>
 
         <div className='flex space-x-4 items-center'>
-          <Link to='/login' className='text-white' onClick={toggleModal}>
+          <div className={styles.login} onClick={toggleModal}>
             Login
-          </Link>
+          </div>
           <Link
             to='/signup'
             className='bg-orange-400 text-white px-4 py-2 rounded-md hover:bg-orange-500'

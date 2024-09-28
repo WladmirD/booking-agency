@@ -9,110 +9,120 @@ const DestinationsScreen = () => {
   const tours = [
     {
       id: 1,
-      name: "Destination 1",
-      price: "9999",
-      date: "September 25th",
-      duration: "3-10 Days",
-      people: "10 People",
-      description: "Destination number 1, here will be some description of location.",
-      url: image1
+      name: 'Destination 1',
+      price: '9999',
+      date: 'September 25th',
+      duration: '3-10 Days',
+      people: '10 People',
+      description:
+        'Destination number 1, here will be some description of location.',
+      url: image1,
     },
     {
       id: 2,
-      name: "Destination 2",
-      price: "9999",
-      date: "September 25th",
-      duration: "3-10 Days",
-      people: "10 People",
-      description: "Destination number 1, here will be some description of location.",
-      url: image2
+      name: 'Destination 2',
+      price: '9999',
+      date: 'September 25th',
+      duration: '3-10 Days',
+      people: '10 People',
+      description:
+        'Destination number 1, here will be some description of location.',
+      url: image2,
     },
     {
       id: 3,
-      name: "Destination 3",
-      price: "9999",
-      date: "September 25th",
-      duration: "3-10 Days",
-      people: "10 People",
-      description: "Destination number 1, here will be some description of location.",
-      url: image3
+      name: 'Destination 3',
+      price: '9999',
+      date: 'September 25th',
+      duration: '3-10 Days',
+      people: '10 People',
+      description:
+        'Destination number 1, here will be some description of location.',
+      url: image3,
     },
     {
       id: 4,
-      name: "Destination 4",
-      price: "9999",
-      date: "September 25th",
-      duration: "3-10 Days",
-      people: "10 People",
-      description: "Destination number 1, here will be some description of location.",
-      url: image4
+      name: 'Destination 4',
+      price: '9999',
+      date: 'September 25th',
+      duration: '3-10 Days',
+      people: '10 People',
+      description:
+        'Destination number 1, here will be some description of location.',
+      url: image4,
     },
     {
       id: 5,
-      name: "Destination 5",
-      price: "9999",
-      date: "September 25th",
-      duration: "3-10 Days",
-      people: "10 People",
-      description: "Destination number 1, here will be some description of location.",
-      url: image1
+      name: 'Destination 5',
+      price: '9999',
+      date: 'September 25th',
+      duration: '3-10 Days',
+      people: '10 People',
+      description:
+        'Destination number 1, here will be some description of location.',
+      url: image1,
     },
     {
       id: 6,
-      name: "Destination 6",
-      price: "9999",
-      date: "September 25th",
-      duration: "3-10 Days",
-      people: "10 People",
-      description: "Destination number 1, here will be some description of location.",
-      url: image2
+      name: 'Destination 6',
+      price: '9999',
+      date: 'September 25th',
+      duration: '3-10 Days',
+      people: '10 People',
+      description:
+        'Destination number 1, here will be some description of location.',
+      url: image2,
     },
     {
       id: 7,
-      name: "Destination 7",
-      price: "9999",
-      date: "September 25th",
-      duration: "3-10 Days",
-      people: "10 People",
-      description: "Destination number 1, here will be some description of location.",
-      url: image3
+      name: 'Destination 7',
+      price: '9999',
+      date: 'September 25th',
+      duration: '3-10 Days',
+      people: '10 People',
+      description:
+        'Destination number 1, here will be some description of location.',
+      url: image3,
     },
     {
       id: 8,
-      name: "Destination 8",
-      price: "9999",
-      date: "September 25th",
-      duration: "3-10 Days",
-      people: "10 People",
-      description: "Destination number 1, here will be some description of location.",
-      url: image4
-    }
+      name: 'Destination 8',
+      price: '9999',
+      date: 'September 25th',
+      duration: '3-10 Days',
+      people: '10 People',
+      description:
+        'Destination number 1, here will be some description of location.',
+      url: image4,
+    },
   ];
 
   return (
-    <div> 
-      <section className={styles.tours}>
+    <div>
+      <div className={styles.tours}>
         <h1>Destinations</h1>
         <div className={styles.tourGrid}>
-          {tours.map(tour => (
+          {tours.map((tour) => (
             <div key={tour.id} className={styles.tourItem}>
               <div className={styles.imagePlaceholder}>
                 <img src={tour.url} alt={tour.name} />
               </div>
               <h2>{tour.name}</h2>
-              <p>From <span className={styles.price}>${tour.price}</span></p>
               <p>
-                <span className={styles.date}>{tour.date}</span> | 
-                <span className={styles.duration}>{tour.duration}</span> | 
+                From <span className={styles.price}>${tour.price}</span>
+              </p>
+              <p>
+                <span className={styles.date}>{tour.date}</span> |
+                <span className={styles.duration}>{tour.duration}</span> |
                 <span className={styles.people}>{tour.people}</span>
               </p>
               <p className={styles.description}>{tour.description}</p>
             </div>
           ))}
         </div>
-      </section>
-    </div>)
+      </div>
+    </div>
+  );
 };
-  
 
 export default DestinationsScreen;
