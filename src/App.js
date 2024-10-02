@@ -24,12 +24,9 @@ function App() {
         <Route path='/packages' element={<PackagesScreen />} />
         <Route path='/booking' element={<BookingsScreen />} />
         <Route path='/contact' element={<ContactScreen />} />
-        <Route
-          path='/login'
-          element={<Login toggleModal={toggleModal} showModal={showModal} />}
-        />
         <Route path='/signup' element={<Signup />} />
       </Routes>
+      {showModal && <Login toggleModal={toggleModal} showModal={showModal} />}
     </Router>
   );
 }

@@ -4,7 +4,7 @@ import BookingForm from './booking-form/booking-form';
 
 const Home = () => {
   return (
-    <div className='min-h-screen flex items-center justify-center'>
+    <div className={styles.container}>
       <BookingForm />
     </div>
   );

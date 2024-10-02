@@ -1,64 +1,6 @@
-/* src/components/DestinationsPage.module.css */
-* {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
-}
-
-body {
-    font-family: Arial, sans-serif;
-}
-
-.header {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    background-color: white;
-    padding: 20px;
-    border-bottom: 1px solid #ccc;
-}
-
-.logo img {
-    width: 50px;
-}
-
-nav ul {
-    list-style: none;
-    display: flex;
-    gap: 20px;
-}
-
-nav ul li a {
-    text-decoration: none;
-    color: black;
-    font-weight: bold;
-}
-
-.auth {
-    display: flex;
-    gap: 10px;
-    align-items: center;
-}
-
-.auth select {
-    padding: 5px;
-}
-
-.auth a {
-    text-decoration: none;
-    color: black;
-}
-
-.signupBtn {
-    background-color: orange;
-    padding: 10px 15px;
-    color: white;
-    border-radius: 5px;
-    font-weight: bold;
-}
-
 .tours {
     padding: 80px;
+    min-height: calc(100vh - 132px);
 }
 
 .tours h1 {
