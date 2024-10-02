@@ -4,14 +4,21 @@ import DatePicker from 'react-datepicker';
 import 'react-datepicker/dist/react-datepicker.css';
 import styles from './index.module.css';
 
-const BookingForm = () => {
-  const [startDate, setStartDate] = useState(null);
-  const [endDate, setEndDate] = useState(null);
+const BookingForm = ({
+  startDate,
+  endDate,
+  onSearch,
+  setEndDate,
+  setStartDate,
+}) => {
   const [numberOfPeople, setNumberOfPeople] = useState(1);
   const [time, setTime] = useState('');
+  const handleSearch = () => {
+    onSearch();
+  };
 
   return (
-    <div className='flex flex-col items-center p-6 shadow-md'>
+    <div className='flex flex-col items-center p-6'>
       <div className={styles.textContainer}>
         <h1 className='text-4xl font-bold mb-4'>Enjoy in the best way!</h1>
         <p className='text-lg mb-6'>Enjoy our services for your trip anytime</p>
@@ -71,7 +78,10 @@ const BookingForm = () => {
             <option value='12:00 PM'>12:00 PM</option>
           </select>
         </div>
-        <button className='mt-6 bg-orange-500 text-white py-2 px-4 rounded-md hover:bg-orange-600'>
+        <button
+          className='mt-6 bg-orange-500 text-white py-2 px-4 rounded-md hover:bg-orange-600'
+          onClick={handleSearch}
+        >
           Search
         </button>
       </div>
