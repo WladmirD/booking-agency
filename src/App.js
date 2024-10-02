@@ -27,7 +27,7 @@ function App() {
           element={<DestinationsDetail />}
         />
         <Route path='/packages' element={<PackagesScreen />} />
-        <Route path='/booking' element={<BookingPages />} />
+        <Route path='/booking' element={<BookingPage />} />
         <Route path='/contact' element={<ContactScreen />} />
         <Route path='/payments' element={<PaymentPage />} />
       </Routes>
