@@ -3,7 +3,6 @@ import React from 'react';
 import { useParams } from 'react-router-dom';
 import styles from './index.module.css';// Import the related CSS module
 import { destinations } from '../utils/dummy-data';
-import image4 from '../../assets/reservation-images/banff.jpg';
 
 const DestinationDetail = () => {
   const { id } = useParams(); // Get destination ID from the route parameters
@@ -15,6 +14,8 @@ const DestinationDetail = () => {
     return <h1>Destination not found</h1>;
   }
 
+  console.log(destination)
+
   return (
     <div className={styles.detailPage}>
         <a href="/destinations" className={styles.backButton}>← Back</a>
@@ -22,9 +23,9 @@ const DestinationDetail = () => {
         <div className={styles.imageWrapper}>
           <img src={destination.url} alt={destination.name} />
           <div className = {styles.img1}>
-          <img src = {image4} alt="img" />
-          <img src = {image4} alt="img" />
-          <img src = {image4} alt="img" />
+          <img src = {destination.url1} alt="img" />
+          <img src = {destination.url1} alt="img" />
+          <img src = {destination.url1} alt="img" />
           </div>
         </div>
         <div className={styles.content}>
@@ -36,18 +37,16 @@ const DestinationDetail = () => {
           <input type="date" className={styles.datePicker} />
 
           <label>Select a time:</label>
-          <select className={styles.timePicker}>
-            <option>Select the time</option>
-          </select>
+          <input type="time" className={styles.timePicker} />
 
           <button className={styles.buyNowButton}>Buy Now</button>
+          <div className={styles.details}>
+            <h2>Details</h2>
+                <p>{destination.detail}</p>
+            </div> 
         </div>
       </div>
-
-      <div className={styles.details}>
-        <h2>Details</h2>
-        <p>{destination.details}</p>
-      </div>
+ 
     </div>
   );
 };

@@ -1,7 +1,12 @@
 import image1 from '../../assets/reservation-images/bali.jpg';
+import image11 from '../../assets/reservation-images/detail.jpg';
 import image2 from '../../assets/reservation-images/taj.jpg';
+import image22 from '../../assets/reservation-images/detail2.jpg';
 import image3 from '../../assets/reservation-images/dubai.jpg';
+import image33 from '../../assets/reservation-images/detail3.jpg';
 import image4 from '../../assets/reservation-images/banff.jpg';
+import image44 from '../../assets/reservation-images/detail4.jpg';
+
 
 export const packages = [
   {
@@ -105,6 +110,8 @@ export const destinations = [
     description:
       'Destination number 1, here will be some description of location.',
     url: image1,
+    detail:'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat',
+    url1: image11,
   },
   {
     id: 2,
@@ -116,6 +123,8 @@ export const destinations = [
     description:
       'Destination number 1, here will be some description of location.',
     url: image2,
+    detail:'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat',
+    url1: image22,
   },
   {
     id: 3,
@@ -127,6 +136,8 @@ export const destinations = [
     description:
       'Destination number 1, here will be some description of location.',
     url: image3,
+    detail:'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat',
+    url1: image33,
   },
   {
     id: 4,
@@ -138,6 +149,8 @@ export const destinations = [
     description:
       'Destination number 1, here will be some description of location.',
     url: image4,
+    detail:'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat',
+    url1: image44,
   },
   {
     id: 5,
@@ -149,6 +162,10 @@ export const destinations = [
     description:
       'Destination number 1, here will be some description of location.',
     url: image1,
+    detail:'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat',
+    url1: image11,
+
+
   },
   {
     id: 6,
@@ -160,6 +177,8 @@ export const destinations = [
     description:
       'Destination number 1, here will be some description of location.',
     url: image2,
+    detail:'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat',
+    url1: image22,
   },
   {
     id: 7,
@@ -171,6 +190,8 @@ export const destinations = [
     description:
       'Destination number 1, here will be some description of location.',
     url: image3,
+    detail:'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat',
+    url1: image33,
   },
   {
     id: 8,
@@ -182,5 +203,7 @@ export const destinations = [
     description:
       'Destination number 1, here will be some description of location.',
     url: image4,
+    detail:'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat',
+    url1: image44,
   },
 ];
