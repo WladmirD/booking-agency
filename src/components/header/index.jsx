@@ -36,9 +36,9 @@ const Header = ({ toggleModal }) => {
             Packages
           </Link>
           <Link
-            to='/booking'
+            to='/bookings'
             className={`hover:text-orange-400 ${
-              location.pathname === '/booking' ? styles.active : ''
+              location.pathname === '/bookings' ? styles.active : ''
             } ${styles.font}`}
           >
             Booking
