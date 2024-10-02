@@ -56,6 +56,10 @@ const PaymentPage = () => {
     }
   };
 
+  const handleNavigate = () => {
+    navigate(`/bookings`, { state: formData });
+  };
+
   const handleSubmit = (e) => {
     e.preventDefault();
     // Mark payment as complete
@@ -65,9 +69,9 @@ const PaymentPage = () => {
   // If payment is complete, show the confirmation page
   if (isPaymentComplete) {
     return (
-      <div className={styles.confirmationPage}>
+      <div className={styles.confirmationPage} onClick={handleNavigate}>
         <div className={styles.iconContainer}>
-          <span className={styles.icon}>✔</span> {/* Checkmark icon */}
+          <span className={styles.icon}>✔</span>
         </div>
         <h1>Your Order is complete!</h1>
         <p>
@@ -76,10 +80,6 @@ const PaymentPage = () => {
       </div>
     );
   }
-
-  const handleNavigate = () => {
-    navigate(`/bookings`, { state: formData });
-  };
 
   return (
     <div className={styles.paymentPage}>
