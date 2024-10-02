@@ -4,27 +4,25 @@ import 'react-datepicker/dist/react-datepicker.css'; // Import DatePicker styles
 import styles from './index.module.css'; // Import the CSS module
 
 const PaymentPage = () => {
-    // State to store all form data
     const [formData, setFormData] = useState({
-        ticketCount: 2, // Default 2 tickets selected
-        ticketPrice: 32, // Price per ticket
-        startDate: null, // Start date for visit
-        endDate: null, // End date for visit
-        time: '', // Selected time
+        ticketCount: 2,
+        ticketPrice: 32,
+        startDate: null,
+        endDate: null,
+        time: '',
         name: '',
         surname: '',
         telephone: '',
         email: '',
-        totalPrice: 64, // Initial total price based on ticket count and price
+        totalPrice: 64,
     });
 
     const [currentStep, setCurrentStep] = useState(1); // Manage which step is shown
+    const [isPaymentComplete, setIsPaymentComplete] = useState(false); // Track payment completion
 
-    // Update ticket count and total price dynamically
     const handleTicketChange = (increment) => {
-        const newCount = Math.max(1, formData.ticketCount + increment); // Minimum 1 ticket
-        const newTotalPrice = newCount * formData.ticketPrice; // Calculate the new total price
-
+        const newCount = Math.max(1, formData.ticketCount + increment);
+        const newTotalPrice = newCount * formData.ticketPrice;
         setFormData({
             ...formData,
             ticketCount: newCount,
@@ -32,7 +30,6 @@ const PaymentPage = () => {
         });
     };
 
-    // Update formData for any input changes
     const handleChange = (e) => {
         const { name, value } = e.target;
         setFormData({
@@ -41,20 +38,30 @@ const PaymentPage = () => {
         });
     };
 
-    // Proceed to the next step
     const handleNextStep = () => {
         if (currentStep < 3) {
             setCurrentStep(currentStep + 1); // Move to the next step
         }
     };
 
-    // Handle form submission
     const handleSubmit = (e) => {
         e.preventDefault();
-        // Log formData or send it to a server/API
-        console.log('Form Data Submitted:', formData);
-        alert('Payment Complete');
+        // Mark payment as complete
+        setIsPaymentComplete(true);
     };
+
+    // If payment is complete, show the confirmation page
+    if (isPaymentComplete) {
+        return (
+            <div className={styles.confirmationPage}>
+                <div className={styles.iconContainer}>
+                    <span className={styles.icon}>✔</span> {/* Checkmark icon */}
+                </div>
+                <h1>Your Order is complete!</h1>
+                <p>You will be receiving a confirmation email with your order details.</p>
+            </div>
+        );
+    }
 
     return (
         <div className={styles.paymentPage}>
@@ -94,7 +101,7 @@ const PaymentPage = () => {
                                         });
                                     }}
                                     className={styles.selectField}
-                                    dateFormat='MMM d, yyyy'
+                                    dateFormat="MMM d, yyyy"
                                     placeholderText="Select a date range"
                                 />
                             </div>
@@ -114,9 +121,13 @@ const PaymentPage = () => {
                             <div className={`${styles.formGroup} ${styles.ticketSelection}`}>
                                 <label>Select Your Tickets</label>
                                 <div className={styles.ticketCounter}>
-                                    <button onClick={() => handleTicketChange(-1)} className={styles.ticketButton}>-</button>
+                                    <button onClick={() => handleTicketChange(-1)} className={styles.ticketButton}>
+                                        -
+                                    </button>
                                     <span className={styles.ticketCount}>{formData.ticketCount}</span>
-                                    <button onClick={() => handleTicketChange(1)} className={styles.ticketButton}>+</button>
+                                    <button onClick={() => handleTicketChange(1)} className={styles.ticketButton}>
+                                        +
+                                    </button>
                                 </div>
                                 <p className={styles.ticketPrice}>$ {formData.ticketPrice} per ticket</p>
                             </div>
@@ -209,12 +220,26 @@ const PaymentPage = () => {
                     <div className={styles.summarySection}>
                         <h4>Your Tickets Overview</h4>
                         <div className={styles.ticketDetails}>
-                            <p><strong>Destination:</strong> Destination 1</p>
-                            <p><strong>Date:</strong> {formData.startDate ? formData.startDate.toLocaleDateString('en-US') : 'Not selected'} to {formData.endDate ? formData.endDate.toLocaleDateString('en-US') : 'Not selected'}</p>
-                            <p><strong>Time:</strong> {formData.time || 'Not selected'}</p>
-                            <p><strong>Tickets:</strong> {formData.ticketCount} Adult (18+)</p>
+                            <p>
+                                <strong>Destination:</strong> Destination 1
+                            </p>
+                            <p>
+                                <strong>Date:</strong>{' '}
+                                {formData.startDate
+                                    ? formData.startDate.toLocaleDateString('en-US')
+                                    : 'Not selected'}{' '}
+                                to {formData.endDate ? formData.endDate.toLocaleDateString('en-US') : 'Not selected'}
+                            </p>
+                            <p>
+                                <strong>Time:</strong> {formData.time || 'Not selected'}
+                            </p>
+                            <p>
+                                <strong>Tickets:</strong> {formData.ticketCount} Adult (18+)
+                            </p>
                             <hr />
-                            <p className={styles.totalPrice}><strong>Total Price:</strong> ${formData.totalPrice.toFixed(2)}</p>
+                            <p className={styles.totalPrice}>
+                                <strong>Total Price:</strong> ${formData.totalPrice.toFixed(2)}
+                            </p>
                         </div>
                     </div>
                 </div>
