@@ -7,6 +7,7 @@ import ContactScreen from './components/contact';
 import Login from './components/login';
 import Home from './components/home';
 import Destinations from './components/destinations';
+import PaymentPage from './components/payments';
 import DestinationsDetail from './components/destination-detail';
 
 function App() {
@@ -27,6 +28,7 @@ function App() {
         <Route path='/packages' element={<PackagesScreen />} />
         <Route path='/booking' element={<BookingsScreen />} />
         <Route path='/contact' element={<ContactScreen />} />
+        <Route path='/payments' element={<PaymentPage />} />
       </Routes>
       {showModal && <Login toggleModal={toggleModal} />}
     </Router>
