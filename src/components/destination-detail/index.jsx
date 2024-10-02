@@ -3,6 +3,7 @@ import React from 'react';
 import { useParams } from 'react-router-dom';
 import styles from './index.module.css';// Import the related CSS module
 import { destinations } from '../utils/dummy-data';
+import image4 from '../../assets/reservation-images/banff.jpg';
 
 const DestinationDetail = () => {
   const { id } = useParams(); // Get destination ID from the route parameters
@@ -16,14 +17,19 @@ const DestinationDetail = () => {
 
   return (
     <div className={styles.detailPage}>
-      <div className={styles.container}>
         <a href="/destinations" className={styles.backButton}>← Back</a>
+      <div className={styles.container}>
         <div className={styles.imageWrapper}>
           <img src={destination.url} alt={destination.name} />
+          <div className = {styles.img1}>
+          <img src = {image4} alt="img" />
+          <img src = {image4} alt="img" />
+          <img src = {image4} alt="img" />
+          </div>
         </div>
         <div className={styles.content}>
           <h1>{destination.name}</h1>
-          <p className={styles.price}>from {destination.price}</p>
+          <p className={styles.price}>from ${destination.price}</p>
           <p className={styles.description}>{destination.description}</p>
 
           <label>Select a date:</label>
