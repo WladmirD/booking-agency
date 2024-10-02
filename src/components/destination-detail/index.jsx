@@ -20,12 +20,12 @@ const DestinationDetail = () => {
 
   return (
     <div className={styles.detailPage}>
-      <div className={styles.container}>
         <a href='/destinations' className={styles.backButton}>
           ← Back
         </a>
+      <div className={styles.container}>
         <div className={styles.imageWrapper}>
-          <img src={destination.url} alt={destination.name} />
+          <img src={destination.url} alt={destination.name} className={styles.mainImage}/>
           <div className = {styles.img1}>
           <img src = {destination.url1} alt="img" />
           <img src = {destination.url1} alt="img" />
