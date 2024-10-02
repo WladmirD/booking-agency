@@ -7,9 +7,8 @@ import ContactScreen from './components/contact';
 import Login from './components/login';
 import Home from './components/home';
 import Destinations from './components/destinations';
+import PaymentPage from './components/payments';
 import DestinationsDetail from './components/destination-detail';
-
-const Signup = () => <div>Sign Up Page</div>;
 
 function App() {
   const [showModal, setShowModal] = useState(false);
@@ -29,7 +28,7 @@ function App() {
         <Route path='/packages' element={<PackagesScreen />} />
         <Route path='/booking' element={<BookingsScreen />} />
         <Route path='/contact' element={<ContactScreen />} />
-        <Route path='/signup' element={<Signup />} />
+        <Route path='/payments' element={<PaymentPage />} />
       </Routes>
       {showModal && <Login toggleModal={toggleModal} />}
     </Router>

@@ -1,0 +1,203 @@
+.paymentPage {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 40px 20px;
+    background-color: white;
+    border-radius: 8px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+}
+
+.steps {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 20px;
+}
+
+.step {
+    flex: 1;
+    text-align: center;
+    font-weight: bold;
+    color: #ccc;
+    padding-bottom: 10px;
+    border-bottom: 2px solid #ddd;
+}
+
+.step span {
+    margin-right: 5px;
+}
+
+.active {
+    color: #ff9900;
+    border-bottom: 2px solid #ff9900;
+}
+
+.mainContainer {
+    display: flex;
+    justify-content: space-between;
+}
+
+.leftSide {
+    width: 60%;
+    padding-right: 20px;
+}
+
+.rightSide {
+    width: 35%;
+    margin-top: 36px;
+}
+
+.formGroup {
+    margin-bottom: 20px;
+}
+
+.formGroup label {
+    display: block;
+    margin-bottom: 5px;
+    font-weight: bold;
+}
+
+.formGroup input,
+.formGroup select,
+.react-datepicker-wrapper input {
+    width: 100%;
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+}
+
+.react-datepicker-wrapper {
+    width: 100%;
+}
+
+.selectField {
+    width: 100%;
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    background-color: white;
+}
+
+.ticketSelection {
+    margin-bottom: 20px;
+}
+
+.ticketCounter {
+    display: flex;
+    align-items: center;
+    background-color: #f8f8f8;
+    padding: 10px;
+    border-radius: 8px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.ticketButton {
+    background-color: #ff9900;
+    color: white;
+    border: none;
+    padding: 10px 15px;
+    border-radius: 5px;
+    font-size: 16px;
+    cursor: pointer;
+}
+
+.ticketButton:hover {
+    background-color: #e68a00;
+}
+
+.ticketCount {
+    font-size: 18px;
+    margin: 0 15px;
+}
+
+.ticketPrice {
+    margin-top: 10px;
+    font-weight: bold;
+}
+
+.summarySection {
+    padding: 20px;
+    background-color: #fff;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.summarySection h4 {
+    margin-bottom: 20px;
+}
+
+.ticketDetails p {
+    margin-bottom: 10px;
+}
+
+.ticketDetails hr {
+    margin: 20px 0;
+}
+
+.totalPrice {
+    font-size: 20px;
+    font-weight: bold;
+    color: #ff9900;
+}
+
+.nextStepBtn {
+    background-color: #ff9900;
+    color: white;
+    padding: 15px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    width: 100%;
+    font-size: 16px;
+}
+
+.nextStepBtn:hover {
+    background-color: #e68a00;
+}
+
+/* Order Confirmation Page CSS */
+.confirmationPage {
+    text-align: center;
+    padding: 50px;
+    background-color: white;
+    margin: 100px auto;
+    border-radius: 10px;
+    max-width: 600px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+}
+
+.iconContainer {
+    font-size: 50px;
+    color: #ff9900;
+    margin-bottom: 20px;
+}
+
+.icon {
+    font-size: 50px;
+}
+
+h1 {
+    font-size: 24px;
+    font-weight: bold;
+    margin-bottom: 10px;
+}
+
+p {
+    font-size: 16px;
+    color: #666;
+}
+
+/* Responsive Design */
+@media screen and (max-width: 768px) {
+    .mainContainer {
+        flex-direction: column;
+    }
+
+    .leftSide,
+    .rightSide {
+        width: 100%;
+    }
+
+    .rightSide {
+        margin-top: 20px;
+    }
+}
