@@ -60,7 +60,7 @@ const Home = () => {
                   onClick={() => handleNavigate(destination.id)}
                 >
                   <img
-                    src={destination.image}
+                    src={destination.url}
                     alt={destination.name}
                     className={styles.image}
                   />
@@ -77,7 +77,7 @@ const Home = () => {
               {filteredPackages.map((packageItem) => (
                 <div key={packageItem.id} className={styles.package}>
                   <img
-                    src={packageItem.image}
+                    src={packageItem.url}
                     alt={packageItem.name}
                     className={styles.image}
                   />
