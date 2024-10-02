@@ -10,8 +10,6 @@ import Destinations from './components/destinations';
 import PaymentPage from './components/payments';
 import DestinationsDetail from './components/destination-detail';
 
-const Signup = () => <div>Sign Up Page</div>;
-
 function App() {
   const [showModal, setShowModal] = useState(false);
   const toggleModal = () => {
