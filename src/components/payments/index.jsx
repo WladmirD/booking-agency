@@ -70,7 +70,7 @@ const PaymentPage = () => {
   if (isPaymentComplete) {
     return (
       <div className={styles.container}>
-        <div className={styles.confirmationPage} onClick={handleNavigate}>
+        <div className={styles.confirmationPage}>
           <div className={styles.iconContainer}>
             <span className={styles.icon}>✔</span>
           </div>
@@ -78,6 +78,14 @@ const PaymentPage = () => {
           <p>
             You will be receiving a confirmation email with your order details.
           </p>
+          <br />
+          <button
+            type='submit'
+            className={styles.nextStepBtn}
+            onClick={handleNavigate}
+          >
+            Go To My Bookings
+          </button>
         </div>
       </div>
     );
