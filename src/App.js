@@ -7,6 +7,7 @@ import ContactScreen from './components/contact';
 import Login from './components/login';
 import Home from './components/home';
 import Destinations from './components/destinations';
+import DestinationsDetail from './components/destination-detail';
 
 const Signup = () => <div>Sign Up Page</div>;
 
@@ -21,6 +22,7 @@ function App() {
       <Routes>
         <Route path='/' element={<Home />} />
         <Route path='/destinations' element={<Destinations />} />
+        <Route path="/destination-detail/:id" element={<DestinationsDetail />} />
         <Route path='/packages' element={<PackagesScreen />} />
         <Route path='/booking' element={<BookingsScreen />} />
         <Route path='/contact' element={<ContactScreen />} />

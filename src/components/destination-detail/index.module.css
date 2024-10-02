@@ -1,0 +1,105 @@
+/* src/components/DestinationDetail.module.css */
+.detailPage {
+    padding: 40px;
+    font-family: Arial, sans-serif;
+  }
+  
+  .header {
+    display: flex;
+    justify-content: space-between;
+    padding: 20px;
+    background-color: white;
+    border-bottom: 1px solid #ccc;
+  }
+  
+  .logo {
+    font-size: 24px;
+    font-weight: bold;
+  }
+  
+  nav ul {
+    list-style: none;
+    display: flex;
+    gap: 20px;
+  }
+  
+  nav ul li a {
+    text-decoration: none;
+    color: black;
+    font-weight: bold;
+  }
+  
+  .auth {
+    display: flex;
+    gap: 10px;
+  }
+  
+  .signupBtn {
+    background-color: orange;
+    padding: 10px 15px;
+    color: white;
+    border-radius: 5px;
+  }
+  
+  .backButton {
+    text-decoration: none;
+    display: block;
+    margin-bottom: 20px;
+    color: #555;
+  }
+  
+  .container {
+    display: flex;
+    gap: 40px;
+  }
+  
+  .imageWrapper img {
+    max-width: 100%;
+    height: auto;
+    border-radius: 10px;
+  }
+  
+  .content {
+    max-width: 400px;
+  }
+  
+  .content h1 {
+    font-size: 2rem;
+    margin-bottom: 20px;
+  }
+  
+  .price {
+    font-size: 1.5rem;
+    color: orange;
+    font-weight: bold;
+  }
+  
+  .description {
+    margin: 20px 0;
+  }
+  
+  .datePicker, .timePicker {
+    display: block;
+    margin: 10px 0;
+    padding: 8px;
+    width: 100%;
+  }
+  
+  .buyNowButton {
+    background-color: orange;
+    color: white;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+  }
+  
+  .details {
+    margin-top: 40px;
+  }
+  
+  .details h2 {
+    font-size: 1.5rem;
+    margin-bottom: 10px;
+  }
+  

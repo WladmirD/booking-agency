@@ -1,4 +1,5 @@
 import React from 'react';
+import { useNavigate } from 'react-router-dom';
 import styles from './index.module.css';
 import image1 from '../../assets/reservation-images/bali.jpg';
 import image2 from '../../assets/reservation-images/taj.jpg';
@@ -6,6 +7,7 @@ import image3 from '../../assets/reservation-images/dubai.jpg';
 import image4 from '../../assets/reservation-images/banff.jpg';
 
 const DestinationsScreen = () => {
+  const navigate = useNavigate();
   const tours = [
     {
       id: 1,
@@ -97,13 +99,17 @@ const DestinationsScreen = () => {
     },
   ];
 
+  const handleClick = (id) => {
+    navigate(`/destination-detail/${id}`);
+  };
+
   return (
     <div>
       <div className={styles.tours}>
         <h1>Destinations</h1>
         <div className={styles.tourGrid}>
           {tours.map((tour) => (
-            <div key={tour.id} className={styles.tourItem}>
+            <div key={tour.id} className={styles.tourItem} onClick={() => handleClick(tour.id)}>
               <div className={styles.imagePlaceholder}>
                 <img src={tour.url} alt={tour.name} />
               </div>
