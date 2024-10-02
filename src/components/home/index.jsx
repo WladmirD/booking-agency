@@ -49,8 +49,7 @@ const Home = () => {
         onSearch={handleSearch}
       />
       {isSearched &&
-        filteredDestinations.length > 0 &&
-        filteredPackages.length > 0 && (
+        (filteredDestinations.length > 0 || filteredPackages.length > 0) && (
           <div className={styles.resultsWrapper}>
             {filteredDestinations.length > 0 && <h2>Destinations</h2>}
             <div className={styles.destinations}>
