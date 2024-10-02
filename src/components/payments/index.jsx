@@ -30,7 +30,6 @@ const PaymentPage = () => {
   const [currentStep, setCurrentStep] = useState(1);
   const [isPaymentComplete, setIsPaymentComplete] = useState(false);
 
-  // Update ticket count and total price dynamically
   const handleTicketChange = (increment) => {
     const newCount = Math.max(1, formData.ticketCount + increment);
     const newTotalPrice = newCount * Number(formData.ticketPrice);
@@ -54,7 +53,7 @@ const PaymentPage = () => {
   // Proceed to the next step
   const handleNextStep = () => {
     if (currentStep < 3) {
-      setCurrentStep(currentStep + 1); // Move to the next step
+      setCurrentStep(currentStep + 1);
     }
   };
 

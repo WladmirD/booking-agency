@@ -1,6 +1,5 @@
-// src/components/LoginModal.js
 import React from 'react';
-import styles from './index.module.css'; // Importing as a CSS module
+import styles from './index.module.css';
 
 function LoginModal({ toggleModal }) {
   const [email, setEmail] = React.useState('');

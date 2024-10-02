@@ -30,6 +30,7 @@ function App() {
         <Route path='/package-detail/:id' element={<PackagesDetail />} />
         <Route path='/contact' element={<ContactScreen />} />
         <Route path='/payments/:id/:type' element={<PaymentPage />} />
+        <Route path='/bookings' element={<BookingsScreen />} />
       </Routes>
       {showModal && <Login toggleModal={toggleModal} />}
     </Router>

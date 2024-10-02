@@ -10,12 +10,8 @@ const BookingPage = () => {
 
   useEffect(() => {
     if (state && state.type) {
-      console.log('state:', state);
-
       if (state.type === 'dest') {
-        console.log('inside dest');
         const destination = destinations.find((d) => d.id === state.destId);
-        console.log(tickets);
 
         if (destination) {
           const newTicket = {
@@ -36,9 +32,7 @@ const BookingPage = () => {
           console.warn(`Destination with id ${state.destId} not found.`);
         }
       } else if (state.type === 'pack') {
-        console.log('inside pack');
-        const packageItem = packages.find((p) => p.id === state.id);
-        console.log('packageItem:', packageItem);
+        const packageItem = packages.find((p) => p.id === state.destId);
 
         if (packageItem) {
           const newTicket = {
