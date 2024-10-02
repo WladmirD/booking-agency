@@ -1,94 +1,125 @@
 import React, { useState, useEffect } from 'react';
-import styles from './index.module.css'; // Import CSS module
+import { useLocation } from 'react-router-dom';
+import { destinations, packages } from '../utils/dummy-data';
+import styles from './index.module.css';
 
 const BookingPage = () => {
-  // Dummy data for booked tickets (replace this with actual data or API call)
+  const location = useLocation();
+  const state = location.state;
   const [tickets, setTickets] = useState([]);
 
-  // Simulate fetching tickets after successful payment
   useEffect(() => {
-    // Simulate API call to get booked tickets
-    const bookedTickets = [
-      {
-        id: 1,
-        tourName: 'Wine tasting In Tuscany',
-        date: 'Fri, 23 Dec 2022',
-        time: '15:00',
-        paymentMethod: 'Paypal',
-        price: '€86.00',
-        status: 'Upcoming',
-        imageUrl: 'https://via.placeholder.com/100x100', // Sample image URL
-      },
-      {
-        id: 2,
-        tourName: 'Wine tasting In Tuscany',
-        date: 'Fri, 23 Dec 2022',
-        time: '15:00',
-        paymentMethod: 'Credit Card',
-        price: '€86.00',
-        status: 'Ended',
-        imageUrl: 'https://via.placeholder.com/100x100', // Sample image URL
-      },
-    ];
+    if (state && state.type) {
+      console.log('state:', state);
 
-    // Set tickets in state
-    setTickets(bookedTickets);
-  }, []);
+      if (state.type === 'dest') {
+        console.log('inside dest');
+        const destination = destinations.find((d) => d.id === state.destId);
+        console.log(tickets);
+
+        if (destination) {
+          const newTicket = {
+            id: Date.now(),
+            tourName: destination.name,
+            paymentMethod: 'Credit Card',
+            price: state.totalPrice,
+            status: 'Upcoming',
+            date: state.startDate
+              ? state.startDate.toLocaleDateString()
+              : 'N/A',
+            time: state.time || 'N/A',
+            imageUrl: destination.url,
+          };
+
+          setTickets((prevTickets) => [...prevTickets, newTicket]);
+        } else {
+          console.warn(`Destination with id ${state.destId} not found.`);
+        }
+      } else if (state.type === 'pack') {
+        console.log('inside pack');
+        const packageItem = packages.find((p) => p.id === state.id);
+        console.log('packageItem:', packageItem);
+
+        if (packageItem) {
+          const newTicket = {
+            id: Date.now(),
+            tourName: packageItem.name,
+            paymentMethod: 'Credit Card',
+            price: state.totalPrice,
+            status: 'Upcoming',
+            date: state.startDate
+              ? state.startDate.toLocaleDateString()
+              : 'N/A',
+            time: state.time || 'N/A',
+            imageUrl: packageItem.url,
+          };
+
+          setTickets((prevTickets) => [...prevTickets, newTicket]);
+        } else {
+          console.warn(`Package with id ${state.id} not found.`);
+        }
+      }
+    } else {
+      console.warn('Invalid state:', state);
+    }
+  }, [state]);
 
   return (
-    <div className={styles.bookingPage}>
-      <h1>My Tickets</h1>
+    <div className={styles.container}>
+      <div className={styles.bookingPage}>
+        <h1>My Tickets</h1>
 
-      {/* Tickets Table */}
-      <div className={styles.ticketList}>
-        {tickets.length === 0 ? (
-          <p>No tickets booked yet.</p>
-        ) : (
-          <table className={styles.ticketTable}>
-            <thead>
-              <tr>
-                <th>Tour Name</th>
-                <th>Payment Method</th>
-                <th>Price</th>
-                <th>Status</th>
-              </tr>
-            </thead>
-            <tbody>
-              {tickets.map((ticket) => (
-                <tr key={ticket.id}>
-                  <td>
-                    <div className={styles.ticketDetails}>
-                      <img
-                        src={ticket.imageUrl}
-                        alt={ticket.tourName}
-                        className={styles.ticketImage}
-                      />
-                      <div>
-                        <p className={styles.tourName}>{ticket.tourName}</p>
-                        <p>
-                          {ticket.date} <br /> {ticket.time}
-                        </p>
-                      </div>
-                    </div>
-                  </td>
-                  <td>{ticket.paymentMethod}</td>
-                  <td>{ticket.price}</td>
-                  <td>
-                    <span
-                      className={
-                        ticket.status === 'Upcoming'
-                          ? styles.statusUpcoming
-                          : styles.statusEnded
-                      }
-                    >
-                      {ticket.status}
-                    </span>
-                  </td>
+        {/* Tickets Table */}
+        <div className={styles.ticketList}>
+          {tickets && tickets.length === 0 ? (
+            <p>No tickets booked yet.</p>
+          ) : (
+            <table className={styles.ticketTable}>
+              <thead>
+                <tr>
+                  <th>Tour Name</th>
+                  <th>Payment Method</th>
+                  <th>Price</th>
+                  <th>Status</th>
                 </tr>
-              ))}
-            </tbody>
-          </table>
-        )}
+              </thead>
+              <tbody>
+                {tickets.map((ticket) => (
+                  <tr key={ticket.id}>
+                    <td>
+                      <div className={styles.ticketDetails}>
+                        <img
+                          src={ticket.imageUrl}
+                          alt={ticket.tourName}
+                          className={styles.ticketImage}
+                        />
+                        <div>
+                          <p className={styles.tourName}>{ticket.tourName}</p>
+                          <p>
+                            {ticket.date} <br /> {ticket.time}
+                          </p>
+                        </div>
+                      </div>
+                    </td>
+                    <td>{ticket.paymentMethod}</td>
+                    <td>{ticket.price}</td>
+                    <td>
+                      <span
+                        className={
+                          ticket.status === 'Upcoming'
+                            ? styles.statusUpcoming
+                            : styles.statusEnded
+                        }
+                      >
+                        {ticket.status}
+                      </span>
+                    </td>
+                  </tr>
+                ))}
+              </tbody>
+            </table>
+          )}
+        </div>
       </div>
     </div>
   );

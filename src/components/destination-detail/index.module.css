@@ -1,5 +1,6 @@
 .detailPage {
   padding: 40px;
+  min-height: calc(100vh - 132px);
 }
 
 .backButton {
@@ -23,7 +24,7 @@
     justify-content: space-between;
 }
 
-  .img1 img {
+.img1 img {
     width: 200px;
     height: 200px; 
     object-fit: cover; 

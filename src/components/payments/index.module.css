@@ -1,3 +1,8 @@
+.container {
+    min-height: calc(100vh - 132px);
+    margin-top: 64px;
+}
+
 .paymentPage {
     max-width: 1200px;
     margin: 0 auto;
