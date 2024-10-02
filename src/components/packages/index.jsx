@@ -6,7 +6,7 @@ import { useNavigate } from 'react-router-dom';
 const PackagesScreen = () => {
   const navigate = useNavigate();
   const handleClick = (id) => {
-    navigate(`/destination-detail/${id}`);
+    navigate(`/package-detail/${id}`);
   };
   return (
     <div>

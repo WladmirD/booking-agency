@@ -9,6 +9,7 @@ import Home from './components/home';
 import Destinations from './components/destinations';
 import PaymentPage from './components/payments';
 import DestinationsDetail from './components/destination-detail';
+import PackagesDetail from './components/package-detail';
 import BookingPage from './components/bookings';
 
 function App() {
@@ -27,6 +28,10 @@ function App() {
           element={<DestinationsDetail />}
         />
         <Route path='/packages' element={<PackagesScreen />} />
+        <Route
+          path='/package-detail/:id'
+          element={<PackagesDetail />}
+        />
         <Route path='/booking' element={<BookingPage />} />
         <Route path='/contact' element={<ContactScreen />} />
         <Route path='/payments/:id/:type' element={<PaymentPage />} />
