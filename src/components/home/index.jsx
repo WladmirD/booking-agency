@@ -1,6 +1,7 @@
 import React, { useState } from 'react';
 import styles from './index.module.css';
 import BookingForm from './booking-form/booking-form';
+import { useNavigate } from 'react-router-dom';
 
 const destinations = [
   {
@@ -135,6 +136,7 @@ const Home = () => {
     useState(destinations);
   const [filteredPackages, setFilteredPackages] = useState(packages);
   const [isSearched, setIsSearched] = useState(false);
+  const navigate = useNavigate();
 
   const handleSearch = () => {
     if (!startDate || !endDate) {
@@ -159,6 +161,9 @@ const Home = () => {
     setIsSearched(true);
   };
 
+  const handleNavigate = (id) => {
+    navigate(`/destination-detail/${id}`);
+  };
   return (
     <div className={styles.container}>
       <BookingForm
@@ -173,7 +178,11 @@ const Home = () => {
           {filteredDestinations.length > 0 && <h2>Destinations</h2>}
           <div className={styles.destinations}>
             {filteredDestinations.map((destination) => (
-              <div key={destination.id} className={styles.destination}>
+              <div
+                key={destination.id}
+                className={styles.destination}
+                onClick={() => handleNavigate(destination.id)}
+              >
                 <img
                   src={destination.image}
                   alt={destination.name}

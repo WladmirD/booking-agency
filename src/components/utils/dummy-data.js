@@ -8,7 +8,7 @@ export const packages = [
     id: 1,
     name: 'Package 1',
     price: '9999',
-    date: 'September 25th',
+    date: '2025-01-01',
     duration: '3-10 Days',
     people: '10 People',
     description:
@@ -19,7 +19,7 @@ export const packages = [
     id: 2,
     name: 'Package 2',
     price: '9999',
-    date: 'September 25th',
+    date: '2025-02-01',
     duration: '3-10 Days',
     people: '10 People',
     description:
@@ -30,7 +30,7 @@ export const packages = [
     id: 3,
     name: 'Package 3',
     price: '9999',
-    date: 'September 25th',
+    date: '2025-03-01',
     duration: '3-10 Days',
     people: '10 People',
     description:
@@ -41,7 +41,7 @@ export const packages = [
     id: 4,
     name: 'Package 4',
     price: '9999',
-    date: 'September 25th',
+    date: '2025-04-01',
     duration: '3-10 Days',
     people: '10 People',
     description:
@@ -52,7 +52,7 @@ export const packages = [
     id: 5,
     name: 'Package 5',
     price: '9999',
-    date: 'September 25th',
+    date: '2025-05-01',
     duration: '3-10 Days',
     people: '10 People',
     description:
@@ -63,7 +63,7 @@ export const packages = [
     id: 6,
     name: 'Package 6',
     price: '9999',
-    date: 'September 25th',
+    date: '2025-06-01',
     duration: '3-10 Days',
     people: '10 People',
     description:
@@ -74,7 +74,7 @@ export const packages = [
     id: 7,
     name: 'Package 7',
     price: '9999',
-    date: 'September 25th',
+    date: '2025-07-01',
     duration: '3-10 Days',
     people: '10 People',
     description:
@@ -85,7 +85,7 @@ export const packages = [
     id: 8,
     name: 'Package 8',
     price: '9999',
-    date: 'September 25th',
+    date: '2025-08-01',
     duration: '3-10 Days',
     people: '10 People',
     description:
@@ -99,7 +99,7 @@ export const destinations = [
     id: 1,
     name: 'Destination 1',
     price: '9999',
-    date: 'September 25th',
+    date: '2025-01-01',
     duration: '3-10 Days',
     people: '10 People',
     description:
@@ -110,7 +110,7 @@ export const destinations = [
     id: 2,
     name: 'Destination 2',
     price: '9999',
-    date: 'September 25th',
+    date: '2025-02-01',
     duration: '3-10 Days',
     people: '10 People',
     description:
@@ -121,7 +121,7 @@ export const destinations = [
     id: 3,
     name: 'Destination 3',
     price: '9999',
-    date: 'September 25th',
+    date: '2025-03-01',
     duration: '3-10 Days',
     people: '10 People',
     description:
@@ -132,7 +132,7 @@ export const destinations = [
     id: 4,
     name: 'Destination 4',
     price: '9999',
-    date: 'September 25th',
+    date: '2025-04-01',
     duration: '3-10 Days',
     people: '10 People',
     description:
@@ -143,7 +143,7 @@ export const destinations = [
     id: 5,
     name: 'Destination 5',
     price: '9999',
-    date: 'September 25th',
+    date: '2025-05-01',
     duration: '3-10 Days',
     people: '10 People',
     description:
@@ -154,7 +154,7 @@ export const destinations = [
     id: 6,
     name: 'Destination 6',
     price: '9999',
-    date: 'September 25th',
+    date: '2025-06-01',
     duration: '3-10 Days',
     people: '10 People',
     description:
@@ -165,7 +165,7 @@ export const destinations = [
     id: 7,
     name: 'Destination 7',
     price: '9999',
-    date: 'September 25th',
+    date: '2025-07-01',
     duration: '3-10 Days',
     people: '10 People',
     description:
@@ -176,7 +176,7 @@ export const destinations = [
     id: 8,
     name: 'Destination 8',
     price: '9999',
-    date: 'September 25th',
+    date: '2025-08-01',
     duration: '3-10 Days',
     people: '10 People',
     description:

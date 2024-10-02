@@ -1,118 +1,49 @@
 import React from 'react';
 import styles from './index.module.css';
-import image1 from '../../assets/reservation-images/bali.jpg';
-import image2 from '../../assets/reservation-images/taj.jpg';
-import image3 from '../../assets/reservation-images/dubai.jpg';
-import image4 from '../../assets/reservation-images/banff.jpg';
+import { packages } from '../utils/dummy-data';
+import { useNavigate } from 'react-router-dom';
 
 const PackagesScreen = () => {
-  const tours = [
-    {
-      id: 1,
-      name: "Package 1",
-      price: "9999",
-      date: "September 25th",
-      duration: "3-10 Days",
-      people: "10 People",
-      description: "Destination number 1, here will be some description of location.",
-      url: image1
-    },
-    {
-      id: 2,
-      name: "Package 2",
-      price: "9999",
-      date: "September 25th",
-      duration: "3-10 Days",
-      people: "10 People",
-      description: "Destination number 1, here will be some description of location.",
-      url: image2
-    },
-    {
-      id: 3,
-      name: "Package 3",
-      price: "9999",
-      date: "September 25th",
-      duration: "3-10 Days",
-      people: "10 People",
-      description: "Destination number 1, here will be some description of location.",
-      url: image3
-    },
-    {
-      id: 4,
-      name: "Package 4",
-      price: "9999",
-      date: "September 25th",
-      duration: "3-10 Days",
-      people: "10 People",
-      description: "Destination number 1, here will be some description of location.",
-      url: image4
-    },
-    {
-      id: 5,
-      name: "Package 5",
-      price: "9999",
-      date: "September 25th",
-      duration: "3-10 Days",
-      people: "10 People",
-      description: "Destination number 1, here will be some description of location.",
-      url: image1
-    },
-    {
-      id: 6,
-      name: "Package 6",
-      price: "9999",
-      date: "September 25th",
-      duration: "3-10 Days",
-      people: "10 People",
-      description: "Destination number 1, here will be some description of location.",
-      url: image2
-    },
-    {
-      id: 7,
-      name: "Package 7",
-      price: "9999",
-      date: "September 25th",
-      duration: "3-10 Days",
-      people: "10 People",
-      description: "Destination number 1, here will be some description of location.",
-      url: image3
-    },
-    {
-      id: 8,
-      name: "Package 8",
-      price: "9999",
-      date: "September 25th",
-      duration: "3-10 Days",
-      people: "10 People",
-      description: "Destination number 1, here will be some description of location.",
-      url: image4
-    }
-  ];
-
+  const navigate = useNavigate();
+  const handleClick = (id) => {
+    navigate(`/destination-detail/${id}`);
+  };
   return (
-    <div> 
+    <div>
       <section className={styles.tours}>
         <h1>Packages</h1>
         <div className={styles.tourGrid}>
-          {tours.map(tour => (
-            <div key={tour.id} className={styles.tourItem}>
+          {packages.map((item) => (
+            <div
+              key={item.id}
+              className={styles.tourItem}
+              onClick={() => handleClick(item.id)}
+            >
               <div className={styles.imagePlaceholder}>
-                <img src={tour.url} alt={tour.name} />
+                <img src={item.url} alt={item.name} />
               </div>
-              <h2>{tour.name}</h2>
-              <p>From <span className={styles.price}>${tour.price}</span></p>
+              <h2>{item.name}</h2>
               <p>
-                <span className={styles.date}>{tour.date}</span> | 
-                <span className={styles.duration}>{tour.duration}</span> | 
-                <span className={styles.people}>{tour.people}</span>
+                From <span className={styles.price}>${item.price}</span>
               </p>
-              <p className={styles.description}>{tour.description}</p>
+              <p>
+                <span className={styles.date}>
+                  {new Intl.DateTimeFormat('en-US', {
+                    year: 'numeric',
+                    month: 'long',
+                    day: 'numeric',
+                  }).format(new Date(item.date))}
+                </span>
+                |<span className={styles.duration}>{item.duration}</span> |
+                <span className={styles.people}>{item.people}</span>
+              </p>
+              <p className={styles.description}>{item.description}</p>
             </div>
           ))}
         </div>
       </section>
-    </div>)
+    </div>
+  );
 };
-  
 
 export default PackagesScreen;
