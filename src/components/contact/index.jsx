@@ -1,20 +1,23 @@
-// src/components/Contact.js
 import React, { useState } from 'react';
-import styles from './index.module.css'; // Importing the CSS module
+import styles from './index.module.css';
 
 function Contact() {
   const [formData, setFormData] = useState({
     name: '',
     email: '',
     message: '',
-    phone: '', // Optional phone number field
+    phone: '',
   });
 
   const handleChange = (e) => {
     const { name, value } = e.target;
+    const sanitizedValue =
+      e.target.type === 'number'
+        ? Number(value)
+        : value.replace(/[^\w\s]/gi, '');
     setFormData({
       ...formData,
-      [name]: e.target.type === 'number' ? Number(value) : value,
+      [name]: sanitizedValue,
     });
   };
 
@@ -48,12 +51,10 @@ function Contact() {
             </p>
             <p>
               <i className='fas fa-envelope'></i> luxevoyage@gmail.com
-            </p>{' '}
-            {/* Updated email */}
+            </p>
           </div>
         </div>
 
-        {/* Contact Form Section */}
         <div className={styles.contactFormContainer}>
           <form onSubmit={handleSubmit} className={styles.contactForm}>
             <div className={styles.formGroup}>
