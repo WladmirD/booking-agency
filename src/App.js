@@ -9,6 +9,7 @@ import Home from './components/home';
 import Destinations from './components/destinations';
 import PaymentPage from './components/payments';
 import DestinationsDetail from './components/destination-detail';
+import BookingPage from './components/bookings';
 
 function App() {
   const [showModal, setShowModal] = useState(false);
@@ -26,9 +27,9 @@ function App() {
           element={<DestinationsDetail />}
         />
         <Route path='/packages' element={<PackagesScreen />} />
-        <Route path='/booking' element={<BookingsScreen />} />
+        <Route path='/booking' element={<BookingPage />} />
         <Route path='/contact' element={<ContactScreen />} />
-        <Route path='/payments' element={<PaymentPage />} />
+        <Route path='/payments/:id/:type' element={<PaymentPage />} />
       </Routes>
       {showModal && <Login toggleModal={toggleModal} />}
     </Router>

@@ -1,14 +1,16 @@
-// src/components/DestinationDetail.js
 import React from 'react';
-import { useParams } from 'react-router-dom';
-import styles from './index.module.css';// Import the related CSS module
+import { useNavigate, useParams } from 'react-router-dom';
 import { destinations } from '../utils/dummy-data';
+import styles from './index.module.css';
 
 const DestinationDetail = () => {
-  const { id } = useParams(); // Get destination ID from the route parameters
+  const { id } = useParams();
+  const navigate = useNavigate();
 
-  // Find the correct destination by its ID
-  const destination = destinations.find(dest => dest.id === parseInt(id));
+  const destination = destinations.find((dest) => dest.id === id);
+  const handleNavigate = () => {
+    navigate(`/payments/${id}/dest`);
+  };
 
   if (!destination) {
     return <h1>Destination not found</h1>;
@@ -18,8 +20,10 @@ const DestinationDetail = () => {
 
   return (
     <div className={styles.detailPage}>
-        <a href="/destinations" className={styles.backButton}>← Back</a>
       <div className={styles.container}>
+        <a href='/destinations' className={styles.backButton}>
+          ← Back
+        </a>
         <div className={styles.imageWrapper}>
           <img src={destination.url} alt={destination.name} />
           <div className = {styles.img1}>
@@ -34,12 +38,12 @@ const DestinationDetail = () => {
           <p className={styles.description}>{destination.description}</p>
 
           <label>Select a date:</label>
-          <input type="date" className={styles.datePicker} />
+          <input type='date' className={styles.datePicker} />
 
           <label>Select a time:</label>
           <input type="time" className={styles.timePicker} />
 
-          <button className={styles.buyNowButton}>Buy Now</button>
+          <button className={styles.buyNowButton} onClick={handleNavigate}>Buy Now</button>
           <div className={styles.details}>
             <h2>Details</h2>
                 <p>{destination.detail}</p>
