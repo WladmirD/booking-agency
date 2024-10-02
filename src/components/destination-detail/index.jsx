@@ -2,22 +2,10 @@
 import React from 'react';
 import { useParams } from 'react-router-dom';
 import styles from './index.module.css';// Import the related CSS module
+import { destinations } from '../utils/dummy-data';
 
 const DestinationDetail = () => {
   const { id } = useParams(); // Get destination ID from the route parameters
-
-  // Simulated data based on ID
-  const destinations = [
-    {
-      id: 1,
-      name: "Lucca Bike Tour",
-      price: "34 €",
-      description: "Lucca is known for its historical charm, beautiful bike routes...",
-      imgUrl: "/path-to-image/bike-tour.jpg",
-      details: "Lorem Ipsum is simply dummy text of the printing industry. Lorem Ipsum has been the industry's standard dummy text..."
-    },
-    // More destinations can be added here
-  ];
 
   // Find the correct destination by its ID
   const destination = destinations.find(dest => dest.id === parseInt(id));
@@ -29,9 +17,9 @@ const DestinationDetail = () => {
   return (
     <div className={styles.detailPage}>
       <div className={styles.container}>
-        <a href="/" className={styles.backButton}>← Back</a>
+        <a href="/destinations" className={styles.backButton}>← Back</a>
         <div className={styles.imageWrapper}>
-          <img src={destination.imgUrl} alt={destination.name} />
+          <img src={destination.url} alt={destination.name} />
         </div>
         <div className={styles.content}>
           <h1>{destination.name}</h1>
@@ -44,7 +32,6 @@ const DestinationDetail = () => {
           <label>Select a time:</label>
           <select className={styles.timePicker}>
             <option>Select the time</option>
-            {/* Add more time options here */}
           </select>
 
           <button className={styles.buyNowButton}>Buy Now</button>

@@ -3,6 +3,7 @@ import { useNavigate } from 'react-router-dom';
 import styles from './index.module.css';
 import { destinations } from '../utils/dummy-data';
 
+
 const DestinationsScreen = () => {
   const navigate = useNavigate();
 
