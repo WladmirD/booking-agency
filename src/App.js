@@ -22,13 +22,16 @@ function App() {
       <Routes>
         <Route path='/' element={<Home />} />
         <Route path='/destinations' element={<Destinations />} />
-        <Route path="/destination-detail/:id" element={<DestinationsDetail />} />
+        <Route
+          path='/destination-detail/:id'
+          element={<DestinationsDetail />}
+        />
         <Route path='/packages' element={<PackagesScreen />} />
         <Route path='/booking' element={<BookingsScreen />} />
         <Route path='/contact' element={<ContactScreen />} />
         <Route path='/signup' element={<Signup />} />
       </Routes>
-      {showModal && <Login toggleModal={toggleModal} showModal={showModal} />}
+      {showModal && <Login toggleModal={toggleModal} />}
     </Router>
   );
 }
