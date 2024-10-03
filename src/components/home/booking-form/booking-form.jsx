@@ -19,8 +19,12 @@ const BookingForm = ({
   return (
     <div className='flex flex-col items-center p-6'>
       <div className={styles.textContainer}>
-        <h1 className='text-4xl font-bold mb-4'>Enjoy in the best way!</h1>
-        <p className='text-lg mb-6'>Enjoy our services for your trip anytime</p>
+        <h1 className='text-4xl font-bold mb-4 text-#333333'>
+          Enjoy in the best way!
+        </h1>
+        <p className='text-lg mb-6 text-#333333'>
+          Enjoy our services for your trip anytime
+        </p>
       </div>
 
       <div
