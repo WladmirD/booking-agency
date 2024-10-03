@@ -20,6 +20,8 @@
     flex: 1;
     padding-right: 50px;
     color: #333;
+    text-align: center;
+    /* Center-align text */
 }
 
 .contactInfo h1 {
@@ -38,6 +40,8 @@
     font-size: 1.1rem;
     display: flex;
     align-items: center;
+    justify-content: center;
+    /* Center-align icon and text */
     margin-bottom: 10px;
 }
 
@@ -58,6 +62,8 @@
 .contactForm {
     display: flex;
     flex-direction: column;
+    text-align: center;
+    /* Center-align form text */
 }
 
 .formGroup {
@@ -113,11 +119,15 @@
     justify-content: space-between;
     max-width: 1200px;
     margin: 0 auto;
+    text-align: center;
+    /* Center-align footer text */
 }
 
 .footerDetails p {
     color: white;
     font-size: 1.1rem;
+    text-align: center;
+    /* Center-align footer paragraph */
 }
 
 .footerDetails i {
@@ -132,4 +142,52 @@
 
 .socialMedia a:hover {
     color: #e68a00;
+}
+
+/* Media Queries for iPhone XR (828x1792) */
+@media screen and (max-width: 828px) {
+    .contactContainer {
+        flex-direction: column;
+        padding: 20px;
+    }
+
+    .contactInfo {
+        padding-right: 0;
+        text-align: center;
+        margin-bottom: 30px;
+    }
+
+    .contactInfo h1 {
+        font-size: 2rem;
+    }
+
+    .contactInfo p {
+        font-size: 1.1rem;
+    }
+
+    .contactFormContainer {
+        padding: 20px;
+        box-shadow: none;
+        /* Reduce shadow for smaller screens */
+    }
+
+    .submitBtn {
+        padding: 12px;
+        font-size: 1rem;
+    }
+
+    .footerContent {
+        flex-direction: column;
+        text-align: center;
+    }
+
+    .footerDetails p {
+        font-size: 1rem;
+        margin-bottom: 20px;
+    }
+
+    .socialMedia a {
+        margin-right: 10px;
+        font-size: 1.2rem;
+    }
 }
