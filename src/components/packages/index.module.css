@@ -63,3 +63,57 @@
     object-fit: cover; 
     margin-bottom: 20px;
 }
+
+@media (max-width: 1200px) {
+    .tourGrid {
+        grid-template-columns: repeat(3, 1fr);
+    }
+}
+
+@media (max-width: 900px) {
+    .tourGrid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+    
+    .tours h1, .tours h2 {
+        font-size: 1.5rem;
+    }
+
+    .tourItem h2 {
+        font-size: 1.2rem;
+    }
+
+    .tours {
+        padding: 40px;
+    }
+
+    .tourItem {
+        padding: 15px;
+    }
+}
+
+@media (max-width: 600px) {
+    .tourGrid {
+        grid-template-columns: 1fr;
+    }
+
+    .tours h1, .tours h2 {
+        font-size: 1.2rem;
+    }
+
+    .tourItem h2 {
+        font-size: 1rem;
+    }
+
+    .tours {
+        padding: 20px;
+    }
+
+    .tourItem {
+        padding: 10px;
+    }
+
+    .imagePlaceholder img {
+        height: auto;
+    }
+}
