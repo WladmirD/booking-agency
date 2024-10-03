@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import React, { useRef, useState } from 'react';
 import DatePicker from 'react-datepicker';
 import { destinations, packages } from '../utils/dummy-data';
 import { useNavigate, useParams } from 'react-router-dom';
@@ -64,6 +64,14 @@ const PaymentPage = () => {
   const handleSubmit = (e) => {
     // Mark payment as complete
     setIsPaymentComplete(true);
+  };
+
+  const timeref = useRef(null);
+
+  const handleTimeSelect = () => {
+    if (timeref.current) {
+      timeref.current.showPicker();
+    }
   };
 
   // If payment is complete, show the confirmation page
@@ -148,11 +156,12 @@ const PaymentPage = () => {
                 </div>
 
                 {/* Time Selector */}
-                <div className={styles.formGroup}>
+                <div className={styles.formGroup} onClick={handleTimeSelect}>
                   <label>Which time?</label>
                   <input
                     type='time'
                     name='time'
+                    ref={timeref}
                     value={formData.time}
                     onChange={handleChange}
                     className={styles.selectField}
