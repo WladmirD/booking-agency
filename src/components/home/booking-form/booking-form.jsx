@@ -48,21 +48,23 @@ const BookingForm = ({
         </div>
 
         {/* Date Range Picker */}
-        <div>
-          <label className='block text-sm w-full font-medium text-gray-700'>
+        <div className='relative'>
+          <label className='block text-sm font-medium text-gray-700'>
             Date Range
           </label>
-          <DatePicker
-            selectsRange
-            startDate={startDate}
-            endDate={endDate}
-            onChange={(update) => {
-              setStartDate(update[0]);
-              setEndDate(update[1]);
-            }}
-            className={`mt-1 border border-gray-300 rounded-md shadow-sm p-2 ${styles.dateRangeContainer}`}
-            dateFormat='MMM d, yyyy'
-          />
+          <div className='mt-1 block w-full border border-gray-300 rounded-md shadow-sm p-2'>
+            <DatePicker
+              selectsRange
+              startDate={startDate}
+              endDate={endDate}
+              onChange={(update) => {
+                setStartDate(update[0]);
+                setEndDate(update[1]);
+              }}
+              className={styles.dateRangeContainer}
+              dateFormat='MMM d, yyyy'
+            />
+          </div>
         </div>
 
         {/* Time Selector */}

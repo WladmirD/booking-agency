@@ -5,7 +5,8 @@
 
 .bookingPage {
    max-width: 1000px;
-   margin: 0 auto;
+   margin: 10px auto;
+   /* Updated to 10px margin around the page */
    padding: 40px;
    background-color: white;
    border-radius: 8px;
@@ -63,4 +64,62 @@ h1 {
 
 .ticketTable tr:hover {
    background-color: #f5f5f5;
+}
+
+/* Responsive Design */
+@media screen and (max-width: 768px) {
+   .bookingPage {
+      margin: 10px;
+      /* Maintain the 10px margin on smaller screens */
+      padding: 20px;
+   }
+
+   .ticketDetails {
+      flex-direction: column;
+      align-items: flex-start;
+   }
+
+   .ticketImage {
+      width: 80px;
+      height: 80px;
+      margin-right: 0;
+      margin-bottom: 10px;
+   }
+
+   .ticketTable th,
+   .ticketTable td {
+      padding: 10px;
+   }
+
+   h1 {
+      font-size: 20px;
+      margin-bottom: 15px;
+   }
+}
+
+@media screen and (max-width: 575px) {
+   .container {
+      margin-top: 32px;
+   }
+
+   .bookingPage {
+      margin: 10px;
+      /* Maintain the 10px margin for mobile screens */
+      padding: 15px;
+   }
+
+   .ticketImage {
+      width: 60px;
+      height: 60px;
+   }
+
+   .ticketTable th,
+   .ticketTable td {
+      padding: 8px;
+   }
+
+   h1 {
+      font-size: 18px;
+      margin-bottom: 10px;
+   }
 }

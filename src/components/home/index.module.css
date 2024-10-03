@@ -22,21 +22,21 @@
    display: flex;
    flex-wrap: wrap;
    gap: 20px;
-   margin-bottom: 12px;
+   margin-bottom: 24px;
  }
  
  .destination, .package {
    width: calc(33.33% - 20px);
-   background-color: #fff;
+   background-color: #f4f4f4;
    border-radius: 12px;
-   box-shadow: 0 4px 12px rgba(0, 0, 0, 0.08);
+   box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2);
    transition: transform 0.3s ease, box-shadow 0.3s ease;
    overflow: hidden;
  }
  
  .destination:hover, .package:hover {
    transform: translateY(-10px);
-   box-shadow: 0 8px 16px rgba(0, 0, 0, 0.15);
+   box-shadow: 0 8px 16px rgba(0, 0, 0, 0.27);
  }
  
  .image {
