@@ -5,7 +5,8 @@
 
 .paymentPage {
     max-width: 1200px;
-    margin: 0 auto;
+    margin: 10px auto;
+    /* Added 10px margin around the page */
     padding: 40px 20px;
     background-color: white;
     border-radius: 8px;
@@ -204,5 +205,102 @@ p {
 
     .rightSide {
         margin-top: 20px;
+    }
+}
+
+/* Additional Media Query for iPhone XR and Similar Devices (828px width) */
+@media screen and (max-width: 828px) {
+    .paymentPage {
+        margin: 10px;
+        /* Maintain 10px margin on smaller screens */
+        padding: 20px 10px;
+    }
+
+    .steps {
+        flex-direction: column;
+    }
+
+    .step {
+        margin-bottom: 15px;
+    }
+
+    .mainContainer {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .leftSide,
+    .rightSide {
+        width: 100%;
+        padding: 0;
+    }
+
+    .ticketCounter {
+        flex-direction: column;
+        align-items: flex-start;
+    }
+
+    .ticketButton {
+        width: 100%;
+        margin-bottom: 10px;
+    }
+
+    .ticketCount {
+        margin: 10px 0;
+        font-size: 1.5rem;
+    }
+
+    .summarySection {
+        width: 100%;
+        margin-top: 20px;
+    }
+
+    .nextStepBtn {
+        font-size: 1.1rem;
+        padding: 12px;
+    }
+}
+
+/* For even smaller screens (like iPhone SE or small Android devices) */
+@media screen and (max-width: 575px) {
+    .paymentPage {
+        margin: 10px;
+        /* Maintain 10px margin for mobile screens */
+        padding: 15px;
+    }
+
+    .steps {
+        flex-direction: column;
+        text-align: center;
+    }
+
+    .step {
+        margin-bottom: 10px;
+    }
+
+    .ticketCount {
+        font-size: 1.2rem;
+    }
+
+    .nextStepBtn {
+        font-size: 1rem;
+        padding: 10px;
+    }
+
+    .confirmationPage {
+        margin: 50px auto;
+        padding: 30px;
+    }
+
+    .iconContainer {
+        font-size: 40px;
+    }
+
+    h1 {
+        font-size: 20px;
+    }
+
+    p {
+        font-size: 14px;
     }
 }
