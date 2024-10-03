@@ -11,9 +11,7 @@ body {
     sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
-  background-image: url("./assets/background.png");
-  background-repeat: no-repeat;
-  background-size: cover;
+  background-color: #f8f1e7;
 }
 
 code {
