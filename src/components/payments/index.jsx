@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import React, { useRef, useState } from 'react';
 import DatePicker from 'react-datepicker';
 import { destinations, packages } from '../utils/dummy-data';
 import { useNavigate, useParams } from 'react-router-dom';
@@ -66,6 +66,14 @@ const PaymentPage = () => {
     setIsPaymentComplete(true);
   };
 
+  const timeref = useRef(null);
+
+  const handleTimeSelect = () => {
+    if (timeref.current) {
+      timeref.current.showPicker();
+    }
+  };
+
   // If payment is complete, show the confirmation page
   if (isPaymentComplete) {
     return (
@@ -128,31 +136,37 @@ const PaymentPage = () => {
                 <h3>Booking Details</h3>
 
                 {/* Date Range Picker */}
-                <div className={styles.formGroup}>
-                  <label>When will you visit?</label>
-                  <DatePicker
-                    selectsRange
-                    startDate={formData.startDate}
-                    endDate={formData.endDate}
-                    onChange={(update) => {
-                      setFormData({
-                        ...formData,
-                        startDate: update[0],
-                        endDate: update[1],
-                      });
-                    }}
-                    className={styles.selectField}
-                    dateFormat='MMM d, yyyy'
-                    placeholderText='Select a date range'
-                  />
+                <div className='relative'>
+                  <label className='text-sm font-medium text-gray-700'>
+                    When will you visit?
+                  </label>
+                  <div className='mt-1 w-full border border-gray-300 rounded-md shadow-sm p-2'>
+                    <DatePicker
+                      selectsRange
+                      startDate={formData.startDate}
+                      endDate={formData.endDate}
+                      onChange={(update) => {
+                        setFormData({
+                          ...formData,
+                          startDate: update[0],
+                          endDate: update[1],
+                        });
+                      }}
+                      className={styles.selectField}
+                      style={{ display: 'flex' }}
+                      dateFormat='MMM d, yyyy'
+                      placeholderText='Select a date range'
+                    />
+                  </div>
                 </div>
 
                 {/* Time Selector */}
-                <div className={styles.formGroup}>
+                <div className={styles.formGroup} onClick={handleTimeSelect}>
                   <label>Which time?</label>
                   <input
                     type='time'
                     name='time'
+                    ref={timeref}
                     value={formData.time}
                     onChange={handleChange}
                     className={styles.selectField}
