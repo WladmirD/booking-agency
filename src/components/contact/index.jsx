@@ -11,10 +11,17 @@ function Contact() {
 
   const handleChange = (e) => {
     const { name, value } = e.target;
-    const sanitizedValue =
-      e.target.type === 'number'
-        ? Number(value)
-        : value.replace(/[^\w\s]/gi, '');
+
+    let sanitizedValue = value;
+
+    if (name === 'email') {
+      // Allow @ and . symbols in the email field
+      sanitizedValue = value.replace(/[^\w\s@.]/gi, '');
+    } else {
+      // Remove all special characters from other fields
+      sanitizedValue = value.replace(/[^\w\s]/gi, '');
+    }
+
     setFormData({
       ...formData,
       [name]: sanitizedValue,

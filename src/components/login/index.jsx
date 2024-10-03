@@ -4,6 +4,7 @@ import styles from './index.module.css';
 function LoginModal({ toggleModal }) {
   const [email, setEmail] = React.useState('');
   const [password, setPassword] = React.useState('');
+  const [showPassword, setShowPassword] = React.useState(false); // State to toggle password visibility
 
   const handleEmailChange = (event) => {
     const sanitizedEmail = event.target.value
@@ -24,6 +25,10 @@ function LoginModal({ toggleModal }) {
     event.preventDefault();
     // Call the login API with the sanitized data
     console.log('Login data:', email, password);
+  };
+
+  const togglePasswordVisibility = () => {
+    setShowPassword((prevShowPassword) => !prevShowPassword);
   };
 
   return (
@@ -58,14 +63,19 @@ function LoginModal({ toggleModal }) {
                 <div className={styles.passwordContainer}>
                   <input
                     id='password'
-                    type='password'
+                    type={showPassword ? 'text' : 'password'} // Toggle between 'password' and 'text'
                     placeholder='Enter your password'
                     required
                     className={styles.input}
                     value={password}
                     onChange={handlePasswordChange}
                   />
-                  <span className={styles.togglePassword}>👁️</span>
+                  <span
+                    className={styles.togglePassword}
+                    onClick={togglePasswordVisibility} // Toggle password visibility on click
+                  >
+                    {showPassword ? '🙈' : '👁️'} {/* Change icon based on visibility */}
+                  </span>
                 </div>
               </div>
               <div className={styles.forgotPassword}>Forgot your password?</div>
