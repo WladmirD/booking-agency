@@ -39,8 +39,8 @@ const PackageDetail = () => {
           <p className={styles.price}>from ${package1.price}</p>
           <p className={styles.description}>{package1.description}</p>
 
-          <label>Select a date:</label>
-          <input type='date' className={styles.datePicker} />
+          {/* <label>Select a date:</label>
+          <input type='date' className={styles.datePicker} /> */}
 
           <button className={styles.buyNowButton} onClick={handleNavigate}>
             Buy Now

@@ -56,12 +56,12 @@
   margin: 20px 0;
 }
 
-.datePicker, .timePicker {
+/* .datePicker, .timePicker {
   display: block;
   margin: 10px 0;
   padding: 8px;
   width: 100%;
-}
+} */
 
 .buyNowButton {
   background-color: orange;
@@ -79,4 +79,44 @@
 .details h2 {
   font-size: 1.5rem;
   margin-bottom: 10px;
+}
+
+@media (max-width: 900px) {
+  .container {
+      flex-direction: column; 
+      align-items: center; 
+  }
+
+  .content {
+      max-width: 100%; 
+      padding: 0 20px; 
+  }
+
+  .img1 {
+      flex-direction: column; 
+      align-items: center;
+      display: none; 
+  }
+
+  .mainImage {
+      height: 300px;
+  }
+}
+
+@media (max-width: 600px) {
+  .content h1 {
+      font-size: 1.5rem; 
+  }
+
+  .price {
+      font-size: 1.2rem; 
+  }
+
+  .details h2 {
+      font-size: 1.2rem; 
+  }
+
+  .buyNowButton {
+      width: 100%; 
+  }
 }
