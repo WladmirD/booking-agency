@@ -39,8 +39,8 @@ const DestinationDetail = () => {
           <p className={styles.price}>from ${destination.price}</p>
           <p className={styles.description}>{destination.description}</p>
 
-          <label>Select a date:</label>
-          <input type='date' className={styles.datePicker} />
+          {/* <label>Select a date:</label>
+          <input type='date' className={styles.datePicker} /> */}
 
           <button className={styles.buyNowButton} onClick={handleNavigate}>
             Buy Now
