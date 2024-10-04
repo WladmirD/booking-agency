@@ -29,6 +29,7 @@ const PaymentPage = () => {
 
   const [currentStep, setCurrentStep] = useState(1);
   const [isPaymentComplete, setIsPaymentComplete] = useState(false);
+  const [isCvcVisible, setIsCvcVisible] = useState(false);
 
   const handleTicketChange = (increment) => {
     const newCount = Math.max(1, formData.ticketCount + increment);
@@ -98,6 +99,17 @@ const PaymentPage = () => {
       </div>
     );
   }
+
+  const formatCardNumber = (value) => {
+    return value
+      .replace(/\D/g, '')
+      .replace(/(.{4})/g, '$1 ')
+      .trim();
+  };
+
+  const formatExpirationDate = (value) => {
+    return value.replace(/\D/g, '').replace(/(\d{2})(\d{0,2})/, '$1/$2');
+  };
 
   return (
     <div className={styles.container}>
@@ -256,7 +268,6 @@ const PaymentPage = () => {
               </div>
             )}
 
-            {/* Step 3: Payment Section */}
             {currentStep === 3 && (
               <div className={styles.paymentSection}>
                 <h3>Payment</h3>
@@ -266,16 +277,39 @@ const PaymentPage = () => {
                     <input
                       type='text'
                       placeholder='1234 5678 9101 3456'
+                      maxLength={19}
+                      onInput={(e) => {
+                        const input = e.currentTarget;
+                        input.value = formatCardNumber(input.value);
+                      }}
                       required
                     />
                   </div>
                   <div className={styles.formGroup}>
                     <label>Expiration Date</label>
-                    <input type='text' placeholder='MM/YY' required />
+                    <input
+                      type='text'
+                      placeholder='MM/YY'
+                      maxLength={5}
+                      onInput={(e) => {
+                        const input = e.currentTarget;
+                        input.value = formatExpirationDate(input.value);
+                      }}
+                      required
+                    />
                   </div>
                   <div className={styles.formGroup}>
                     <label>Card Security Code</label>
-                    <input type='text' placeholder='***' required />
+                    <input
+                      type={isCvcVisible ? 'text' : 'password'}
+                      placeholder='***'
+                      maxLength={4}
+                      pattern='\d{3,4}'
+                      inputMode='numeric'
+                      onBlur={() => setIsCvcVisible(false)}
+                      onFocus={() => setIsCvcVisible(true)}
+                      required
+                    />
                   </div>
                   <button type='submit' className={styles.nextStepBtn}>
                     Complete Payment

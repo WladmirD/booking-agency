@@ -17,7 +17,7 @@ function App() {
     setShowModal(!showModal);
   };
   return (
-    <Router>
+    <Router basename={process.env.PUBLIC_URL}>
       <Header toggleModal={toggleModal} />
       <Routes>
         <Route path='/' element={<Home />} />
