@@ -36,8 +36,8 @@ const Home = () => {
     setIsSearched(true);
   };
 
-  const handleNavigate = (id) => {
-    navigate(`/destination-detail/${id}`);
+  const handleNavigate = (id, route) => {
+    navigate(`/${route}/${id}`);
   };
   return (
     <div className={styles.container}>
@@ -57,7 +57,9 @@ const Home = () => {
                 <div
                   key={destination.id}
                   className={styles.destination}
-                  onClick={() => handleNavigate(destination.id)}
+                  onClick={() =>
+                    handleNavigate(destination.id, 'destination-detail')
+                  }
                 >
                   <img
                     src={destination.url}
@@ -75,7 +77,13 @@ const Home = () => {
             {filteredPackages.length > 0 && <h2>Packages</h2>}
             <div className={styles.packages}>
               {filteredPackages.map((packageItem) => (
-                <div key={packageItem.id} className={styles.package}>
+                <div
+                  key={packageItem.id}
+                  className={styles.package}
+                  onClick={() =>
+                    handleNavigate(packageItem.id, 'package-detail')
+                  }
+                >
                   <img
                     src={packageItem.url}
                     alt={packageItem.name}

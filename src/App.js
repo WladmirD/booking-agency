@@ -1,5 +1,5 @@
 import React, { useState } from 'react';
-import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
+import { HashRouter as Router, Routes, Route } from 'react-router-dom';
 import PackagesScreen from './components/packages';
 import Header from './components/header';
 import BookingsScreen from './components/bookings';
@@ -17,7 +17,7 @@ function App() {
     setShowModal(!showModal);
   };
   return (
-    <Router basename={process.env.PUBLIC_URL}>
+    <>
       <Header toggleModal={toggleModal} />
       <Routes>
         <Route path='/' element={<Home />} />
@@ -33,7 +33,7 @@ function App() {
         <Route path='/bookings' element={<BookingsScreen />} />
       </Routes>
       {showModal && <Login toggleModal={toggleModal} />}
-    </Router>
+    </>
   );
 }
 

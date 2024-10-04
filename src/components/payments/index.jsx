@@ -304,7 +304,7 @@ const PaymentPage = () => {
                       type={isCvcVisible ? 'text' : 'password'}
                       placeholder='***'
                       maxLength={4}
-                      pattern='\d{3,4}'
+                      pattern='\d{3}'
                       inputMode='numeric'
                       onBlur={() => setIsCvcVisible(false)}
                       onFocus={() => setIsCvcVisible(true)}

@@ -63,6 +63,7 @@ const BookingForm = ({
               }}
               className={styles.dateRangeContainer}
               dateFormat='MMM d, yyyy'
+              wrapperClassName='w-full'
             />
           </div>
         </div>
