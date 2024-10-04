@@ -1,0 +1,24 @@
+{
+  "files": {
+    "main.css": "/booking-agency/static/css/main.e54d3eaa.css",
+    "main.js": "/booking-agency/static/js/main.a6b55c83.js",
+    "static/js/453.c908287f.chunk.js": "/booking-agency/static/js/453.c908287f.chunk.js",
+    "static/media/detail3.jpg": "/booking-agency/static/media/detail3.b1194fbfd839e4faf8fc.jpg",
+    "static/media/detail.jpg": "/booking-agency/static/media/detail.7a9b93c3b2c0c0611243.jpg",
+    "static/media/dubai.jpg": "/booking-agency/static/media/dubai.7da26a9e3c9d7f9a86a3.jpg",
+    "static/media/bali.jpg": "/booking-agency/static/media/bali.23c67699b07f6531e998.jpg",
+    "static/media/detail2.jpg": "/booking-agency/static/media/detail2.8ecc8665153c7eed478e.jpg",
+    "static/media/taj.jpg": "/booking-agency/static/media/taj.1a3e3b38b75f8f650a83.jpg",
+    "static/media/detail4.jpg": "/booking-agency/static/media/detail4.adf6a1f93a642c9c8fae.jpg",
+    "static/media/banff.jpg": "/booking-agency/static/media/banff.7cd242cdd35efcc82656.jpg",
+    "static/media/logo.svg": "/booking-agency/static/media/logo.75cb33ce5f2841c8ed0bcae35da156e0.svg",
+    "index.html": "/booking-agency/index.html",
+    "main.e54d3eaa.css.map": "/booking-agency/static/css/main.e54d3eaa.css.map",
+    "main.a6b55c83.js.map": "/booking-agency/static/js/main.a6b55c83.js.map",
+    "453.c908287f.chunk.js.map": "/booking-agency/static/js/453.c908287f.chunk.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.e54d3eaa.css",
+    "static/js/main.a6b55c83.js"
+  ]
+}
