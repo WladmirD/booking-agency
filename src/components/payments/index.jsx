@@ -156,6 +156,7 @@ const PaymentPage = () => {
                       style={{ display: 'flex' }}
                       dateFormat='MMM d, yyyy'
                       placeholderText='Select a date range'
+                      wrapperClassName='w-full'
                     />
                   </div>
                 </div>
@@ -169,7 +170,6 @@ const PaymentPage = () => {
                     ref={timeref}
                     value={formData.time}
                     onChange={handleChange}
-                    className={styles.selectField}
                   />
                 </div>
 
