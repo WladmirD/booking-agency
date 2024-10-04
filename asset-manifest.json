@@ -1,7 +1,7 @@
 {
   "files": {
     "main.css": "/booking-agency/static/css/main.e54d3eaa.css",
-    "main.js": "/booking-agency/static/js/main.de42fa21.js",
+    "main.js": "/booking-agency/static/js/main.343a62c3.js",
     "static/js/453.c908287f.chunk.js": "/booking-agency/static/js/453.c908287f.chunk.js",
     "static/media/detail3.jpg": "/booking-agency/static/media/detail3.b1194fbfd839e4faf8fc.jpg",
     "static/media/detail.jpg": "/booking-agency/static/media/detail.7a9b93c3b2c0c0611243.jpg",
@@ -14,11 +14,11 @@
     "static/media/logo.svg": "/booking-agency/static/media/logo.75cb33ce5f2841c8ed0bcae35da156e0.svg",
     "index.html": "/booking-agency/index.html",
     "main.e54d3eaa.css.map": "/booking-agency/static/css/main.e54d3eaa.css.map",
-    "main.de42fa21.js.map": "/booking-agency/static/js/main.de42fa21.js.map",
+    "main.343a62c3.js.map": "/booking-agency/static/js/main.343a62c3.js.map",
     "453.c908287f.chunk.js.map": "/booking-agency/static/js/453.c908287f.chunk.js.map"
   },
   "entrypoints": [
     "static/css/main.e54d3eaa.css",
-    "static/js/main.de42fa21.js"
+    "static/js/main.343a62c3.js"
   ]
 }
