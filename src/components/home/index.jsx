@@ -69,7 +69,10 @@ const Home = () => {
                   <div className={styles.info}>
                     <h3>{destination.name}</h3>
                     <p>{destination.description}</p>
-                    <p>Price: ${destination.price}</p>
+                    <p>
+                      Price:
+                      <div className={styles.price}>${destination.price}</div>
+                    </p>
                   </div>
                 </div>
               ))}
@@ -92,7 +95,10 @@ const Home = () => {
                   <div className={styles.info}>
                     <h3>{packageItem.name}</h3>
                     <p>{packageItem.description}</p>
-                    <p>Price: ${packageItem.price}</p>
+                    <p>
+                      Price:
+                      <div className={styles.price}>${packageItem.price}</div>
+                    </p>
                   </div>
                 </div>
               ))}
