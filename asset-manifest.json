@@ -1,7 +1,7 @@
 {
   "files": {
-    "main.css": "/booking-agency/static/css/main.1325f345.css",
-    "main.js": "/booking-agency/static/js/main.eeb88427.js",
+    "main.css": "/booking-agency/static/css/main.86976b51.css",
+    "main.js": "/booking-agency/static/js/main.4035daac.js",
     "static/js/453.c908287f.chunk.js": "/booking-agency/static/js/453.c908287f.chunk.js",
     "static/media/detail3.jpg": "/booking-agency/static/media/detail3.b1194fbfd839e4faf8fc.jpg",
     "static/media/detail.jpg": "/booking-agency/static/media/detail.7a9b93c3b2c0c0611243.jpg",
@@ -13,12 +13,12 @@
     "static/media/banff.jpg": "/booking-agency/static/media/banff.7cd242cdd35efcc82656.jpg",
     "static/media/logo.svg": "/booking-agency/static/media/logo.75cb33ce5f2841c8ed0bcae35da156e0.svg",
     "index.html": "/booking-agency/index.html",
-    "main.1325f345.css.map": "/booking-agency/static/css/main.1325f345.css.map",
-    "main.eeb88427.js.map": "/booking-agency/static/js/main.eeb88427.js.map",
+    "main.86976b51.css.map": "/booking-agency/static/css/main.86976b51.css.map",
+    "main.4035daac.js.map": "/booking-agency/static/js/main.4035daac.js.map",
     "453.c908287f.chunk.js.map": "/booking-agency/static/js/453.c908287f.chunk.js.map"
   },
   "entrypoints": [
-    "static/css/main.1325f345.css",
-    "static/js/main.eeb88427.js"
+    "static/css/main.86976b51.css",
+    "static/js/main.4035daac.js"
   ]
 }
