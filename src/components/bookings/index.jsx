@@ -91,6 +91,7 @@ const BookingPage = () => {
                           <p className={styles.tourName}>{ticket.tourName}</p>
                           <p>
                             {ticket.date} <br /> {ticket.time}
+                            <p> </p>
                           </p>
                         </div>
                       </div>
